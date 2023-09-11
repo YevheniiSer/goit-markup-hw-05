@@ -95,6 +95,10 @@ img {
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.nav-link-nline:hover,
+.nav-link-nline:focus {
+    color: #404bbf;
+}
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
@@ -292,7 +296,6 @@ img {
 .team-list-icon {
     display: flex;
     gap: 24px;
-    margin: 0 16px 0 16px ;
     justify-content: center;
 }
 .team-icon-link {
@@ -464,4 +467,192 @@ background-color: #31D0AA;
 }
 .footer-icon {
     fill: #F4F4FD;
+}
+/*-----backdrop-----*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.40);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) linear,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) linear;
+}
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;  
+}
+/*-----modal-----*/
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    padding: 72px 24px 24px 24px;
+}
+.close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+    line-height: 0;
+    background-color: #E7E9FC;
+    border: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    cursor: pointer;
+    fill: #2E2F42;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn:hover,
+.close-btn:focus {
+    background-color: #404bbf;
+    fill: #ffffff;
+}
+.close-btn-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-description {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.form-field-label{
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+.form-field-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-field-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    padding: 8px 16px 8px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment:focus {
+    border-color: #4D5AE5;
+    outline: transparent;
+}
+.form-comment::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+.form-comment {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+.form-window-input-field {
+    position: relative;
+}
+.form-field-input:focus {
+    border-color: #4D5AE5;
+    outline: transparent;
+}
+.form-field-input:focus + .form-field-icon {
+    fill: #4D5AE5;
+}
+.form-window-field {
+    margin-bottom: 8px;
+}
+.form-checkbox-own {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    cursor: pointer;
+    fill: transparent;
+    margin-right: 8px;
+}
+.form-checkbox:checked
+ + .form-checkbox-label
+ > .form-checkbox-own {
+    fill: #F4F4FD;
+    background-color: #4D5AE5;
+    border-color: #4D5AE5;
+    border-radius: 4px;
+}
+.form-checkbox:focus+.form-checkbox-label>.form-checkbox-own {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+.form-checkbox-label{
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+}
+.form-privacy-link {
+    margin-left: 5px;
+    color: #4D5AE5;
+    text-decoration: underline;
+}
+.form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+.form-submit {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 4px;
+    background: #4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
