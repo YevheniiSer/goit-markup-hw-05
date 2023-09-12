@@ -588,6 +588,7 @@ background-color: #31D0AA;
 .close-btn:focus {
     background-color: #404bbf;
     fill: #ffffff;
+    border: none;
 }
 .close-btn-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -670,7 +671,7 @@ background-color: #31D0AA;
     fill: #4D5AE5;
 }
 .form-window-field {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 .form-checkbox-own {
     display: inline-flex;
