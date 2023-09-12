@@ -482,9 +482,9 @@ background-color: #31D0AA;
 }
 .sub-form {
     display: flex;
+    gap: 24px;
 }
 .sub-lable {
-    gap: 24px;
     height: 40px;
 }
 .sub-input {
@@ -512,7 +512,7 @@ background-color: #31D0AA;
     justify-content: center;
     align-items: center;
     color: #FFF;
-    font-family: Roboto;
+    font-family: Roboto,sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
