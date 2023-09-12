@@ -673,6 +673,9 @@ background-color: #31D0AA;
 .form-window-field {
     margin-bottom: 8px;
 }
+.form-window-field-textaria {
+    margin-bottom: 16px;
+}
 .form-checkbox-own {
     display: inline-flex;
     justify-content: center;
